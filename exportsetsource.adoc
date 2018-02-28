@@ -1,0 +1,59 @@
+= fungsi dari .source, set dan export
+
+=== Source
+
+source berfungsi untuk membaca dan mengeksekusi perintah dari shell yang sedang berjalan
+
+====Syntax :
+
+	.namafile[argumen]
+
+	source namafile[argumen]
+
+====contoh :
+
+	source /home/vivek/lsst2/myfunctions.sh
+
+=== set 
+
+berfungsi untuk mengubah value dari sebuah shell option serta untuk mengatur posisi dari parameter/ menampilkan nama dari nilai dari variabel-variabel yang ada pada shell
+
+====Syntax :
+
+	set [--abefhkmnptuvxBCEHPT] [-o option-name] [argumen ...]
+
+
+      	set [+ abefhkmnptuvxBCEHPT] [+ o option-name] [argumen ...]
+
+====contoh
+	
+	set -- hello "$@"
+
+keterangan : akan meambah kata hello di depan $1 $2 dan lain lain
+
+note :
+
+jika argument dan options dikosongkan maka set akan menampilkan nama dan semua nilai variabel dan fungsi shell yang diurutkan menurut lokasi saat ini. 
+
+=== export
+
+export berfungsi untuk mengatur environment variabel. export juga dapat digunakan untuk menandai nama enviroment variabel yang akan dieksport dengan child process untuk proses inhenritance.
+
+=====Syntax :
+
+	 export [-fn] [-p] [name[=value]]
+
+=====contoh :
+		
+	export country=Indonesia
+
+keterangan :
+
+-f nama yang mengacu pada fungsi shell, atau variabel shell
+	
+-n untuk me-unmark setiap nama untuk export
+-p untuk menampilkan output dalam bentuk yang bisa digunakan kembali sebagai input
+
+note :
+
+jika tidak ada nama yang diberikan atau jika opsi -p diberikan, maka daftar nama yang diekspor akan ditampilkan.
