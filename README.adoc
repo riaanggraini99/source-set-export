@@ -4,13 +4,13 @@
 
 source berfungsi untuk membaca dan mengeksekusi perintah dari shell yang sedang berjalan
 
-====Syntax :
+==== Syntax :
 
 	.namafile[argumen]
 
 	source namafile[argumen]
 
-====contoh :
+==== contoh :
 
 	source /home/vivek/lsst2/myfunctions.sh
 
@@ -18,14 +18,14 @@ source berfungsi untuk membaca dan mengeksekusi perintah dari shell yang sedang 
 
 berfungsi untuk mengubah value dari sebuah shell option serta untuk mengatur posisi dari parameter/ menampilkan nama dari nilai dari variabel-variabel yang ada pada shell
 
-====Syntax :
+==== Syntax :
 
 	set [--abefhkmnptuvxBCEHPT] [-o option-name] [argumen ...]
 
 
       	set [+ abefhkmnptuvxBCEHPT] [+ o option-name] [argumen ...]
 
-====contoh
+==== contoh
 	
 	set -- hello "$@"
 
@@ -39,11 +39,11 @@ jika argument dan options dikosongkan maka set akan menampilkan nama dan semua n
 
 export berfungsi untuk mengatur environment variabel. export juga dapat digunakan untuk menandai nama enviroment variabel yang akan dieksport dengan child process untuk proses inhenritance.
 
-=====Syntax :
+===== Syntax :
 
 	 export [-fn] [-p] [name[=value]]
 
-=====contoh :
+===== contoh :
 		
 	export country=Indonesia
 
